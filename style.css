@@ -1,0 +1,137 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* outline: 1px solid hotpink; */
+}
+
+:root {
+    --neutral-900: hsl(234, 12%, 34%);
+    --neutral-700: hsl(229, 6%, 66%);
+    --neutral-500: hsl(0, 0%, 98%);
+
+    /* border's colors */
+    --border-red: hsl(0, 78%, 62%);
+    --border-cyan: hsl(180, 62%, 55%);
+    --border-orange: hsl(34, 97%, 64%);
+    --border-blue: hsl(212, 86%, 64%);
+
+    --f-weight-900: 600;
+    --f-weight-700: 400;
+    --f-weight-500: 200;
+
+    --f-size-900: 2.25rem; /*35px*/
+    --f-size-500: 1.25rem; /*20px*/
+    --f-size-300: 0.9375rem; /*15px*/
+    --f-size-200: 0.8125rem; /*13px*/
+    --f-size-100: 0.6875rem; /* 11px */
+
+    --f-family: 'Poppins', sans-serif;;
+}
+
+html {
+    font-family: var(--f-family);
+    font-weight: var(--f-weight-500);
+    color: var(--neutral-700);
+}
+
+body {
+    background-color: var(--neutral-500);
+}
+
+header {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: var(--f-size-900);
+    color: var(--neutral-900);
+    font-weight: var(--f-weight-900);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+h1 span {
+    font-weight: var(--f-weight-500);
+}
+
+h2 {
+    font-size: var(--f-size-500);
+    color: var(--neutral-900);
+    font-weight: var(--f-weight-900);
+    margin-bottom: 10px;
+}
+
+p {
+    font-weight: var(--f-weight-700);
+}
+
+header p {
+    font-size: var(--f-size-300);
+    line-height: 1.6;
+}
+
+.card p {
+    font-size: var(--f-size-200);
+    line-height: 1.8;
+}
+
+.wrapper {
+    --gap: 30px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+    gap: var(--gap);
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+
+.wrapper--small {
+    display: block;
+    max-width: 500px;
+    margin-top: 90px;
+    margin-inline: auto;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    flex: 1;
+}
+
+.card {
+    text-align: initial;
+    padding: 30px;
+    border-radius: 6px;
+    border: 0.px solid var(--neutral-500);
+    border-top: 5px solid;
+    box-shadow: 0 10px 25px rgba(76, 78, 97, 0.3);
+}
+
+img {
+    display: block;
+    margin: 40px 0 0 auto;
+}
+
+/* border's colors */
+.col:first-child .card {
+    border-top-color: var(--border-cyan);
+}
+
+.col:nth-child(2) .card:first-child {
+    border-top-color: var(--border-red);
+}
+
+.col:nth-child(2) .card:last-child {
+    border-top-color: var(--border-orange);
+}
+
+.col:last-child .card {
+    border-top-color: var(--border-blue);
+}
